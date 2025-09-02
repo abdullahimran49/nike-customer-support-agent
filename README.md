@@ -74,12 +74,21 @@ graph TD
     C -->|Returns/Refunds| F[Returns Agent]
     C -->|General Questions| G[Inquiry Agent]
     C -->|Complex Issues| H[Escalation Agent]
-    D --> I[Response + Handoff Options]
-    E --> I
-    F --> I
-    G --> I
-    H --> J[Human Support]
+    
+    D --> D1[get_product_info API Call]
+    E --> E1[get_order_status Tool]
+    F --> F1[getreturnpolicy Tool]
+    G --> G1[get_faq Tool]
+    
+    D1 --> I[Response + Handoff Options]
+    E1 --> E2[Query orders.db via SQLite]
+    F1 --> I
+    G1 --> I
+    E2 --> I
+    H --> J[Human Support Draft]
     I --> K[User Response]
+    
+
 
 ```
 
@@ -143,5 +152,6 @@ Make env file and add GEMINI_API_KEY=YOURAPIKEY
 # 📝 License
 
 This project is **MIT Licensed** – see `LICENSE` for details.
+
 
 
