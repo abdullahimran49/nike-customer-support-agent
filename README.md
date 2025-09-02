@@ -64,7 +64,8 @@ Python-dotenv                  # Environment configuration
 
 
 # 🔄 Agent Workflow
-mermaid
+
+```mermaid
 graph TD
     A[User Query] --> B[Orchestrator Agent]
     B --> C{Query Analysis}
@@ -79,6 +80,8 @@ graph TD
     G --> I
     H --> J[Human Support]
     I --> K[User Response]
+
+```
 
 # 🛒 Sample Orders
 
@@ -140,7 +143,4 @@ Make env file and add GEMINI_API_KEY=YOURAPIKEY
 # 📝 License
 
 This project is **MIT Licensed** – see `LICENSE` for details.
-
-
-
 
